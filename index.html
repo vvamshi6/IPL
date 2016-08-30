@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="http://code.angularjs.org/1.2.13/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+		<script src="https://cdn.firebase.com/libs/angularfire/2.0.2/angularfire.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-app="iplApp">
+<div >
+<ui-view></ui-view>
+</div>
+
+</body>
+ 	 <script src="controller/player_ctrl.js"></script>
+	<script src="controller/team_ctrl.js"></script>
+	<script>
+	var config = {
+	apiKey: "AIzaSyDX6XXUyTcnOWEZOFj3uykILKJfYOtIzYw",
+	authDomain: "example-3823d.firebaseapp.com",
+	databaseURL: "https://example-3823d.firebaseio.com/",
+	storageBucket: "example-3823d.appspot.com",
+};
+firebase.initializeApp(config);
+	</script>
+</html>
