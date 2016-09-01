@@ -1,16 +1,10 @@
-<!-- <div ng-init="myVar = 'file:///home/bridgeit/Desktop/Bridgelabz/Angular/IPL/index.html#/player'">
-<div ng-repeat="(key, value) in teams">
-  <p><a ng-href="{{myVar}}">{{key}}</a></p>
-</div> -->
-<!-- <div ng-app="app"> -->
-     <!-- <div ng-controller="ParentCtrl"> -->
-         <div class="container" ng-init="myVar = 'file:///home/bridgeit/Desktop/Bridgelabz/Angular/IPL/index.html#/player'">
-             <div class="row">
-                 <div data-ng-repeat="team in teams" class="col-md-3">
-                   <a  ng-href="{{myVar}}" ng-click = "setData(team.team_name)">{{team.team_name}}</a>
-                     <img src = 'abc.jpg' class = 'thumbnail' alt = 'team image' height = "200" width=" 200"></img><br>
-              </br>   </div>
-             </div>
-         </div>
-     <!-- </div> -->
-<!-- </div> -->
+<div class="container" ng-init="myVar = '#/player'">
+    <div class="row" ng-controller = 'team_ctrl'>
+        <div  data-ng-repeat="team in data" class="col-md-3">
+            <a ng-href="{{myVar}}" ng-click = "teamName(team.team_name)">{{team.team_name}}</a>
+            <img src='abc.jpg' class='thumbnail' alt='team image' height="200" width=" 200"></img>
+            <br>
+            </br>
+        </div>
+    </div>
+</div>

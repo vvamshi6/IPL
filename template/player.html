@@ -1,23 +1,22 @@
-
-  <!-- <p>{{data}}</p> -->
-  <table>
+<table>
     <tr>
-    <th>plAYER</th>
-    <th>iMAGE</th>
-  </tr>
-  <tbody>
-    <tr ng-repeat="x in data">
-      <td>
-        <li>{{x.player_name}}</li>
-        <li>{{x.player_role}}</li>
-        <li>{{x.player_dob}}</li>
-        <li>{{x.player_nationality}}</li>
-        <li>{{x.player_batting_style}}</li>
-        <li>{{x.player_bowling_style}}</li>
-              </td>
-      <td>
-        <img src={{x.player_img_url}}></img>
-      </td>
+        <th>PLAYER</th>
+        <th>IMAGE</th>
     </tr>
-  </tbody>
-  </table>
+    <tbody>
+        <tr ng-repeat="x in data">
+            <td>
+                <a href="">
+                    <li>{{x.player_name}}</li>
+                    <li>{{x.player_role}}</li>
+                    <li>{{x.player_dob}}</li>
+                    <li>{{x.player_nationality}}</li>
+                    <li>{{x.player_batting_style}}</li>
+                    <li>{{x.player_bowling_style}}</li>
+            </td>
+            <td>
+                <img src='{{x.player_img_url}}'></img>
+            </td>
+        </tr>
+    </tbody>
+</table>
