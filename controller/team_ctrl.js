@@ -12,25 +12,27 @@ function retrieveData($scope, $firebaseObject, $rootScope, TeamService, ImageSer
             TeamService.setData(name);
         }
         $scope.getImage = function(image) {
-
             console.log('function called');
             var url = ImageService.getUrl(image).then(function(url) {
+                // var currentElement = angular.element('image');
+                // currentElement.src = url;
+                // angular.element(image) = url;
                 document.getElementById(image).src = url;
-                console.log(url);
+                // console.log(url);
                 // $scope.actualUrl(url);
-                $scope.iUrl = url;
-                console.log($scope.iUrl);
-                return $scope.iUrl;
+                // $scope.iUrl = url;
+                // console.log($scope.iUrl);
+                // return $scope.iUrl;
             });
-             return iUrl;
+            //  return iUrl;
         }
-        $scope.images = {};
-        angular.forEach(data, function(i) {
-            ImageService.getUrl(i.team_img_url).then(function(url) {
-                $scope.images[i.team_img_url] = url;
-            });
-        });
-        console.log($scope.images);
+        // $scope.images = {};
+        // angular.forEach(data, function(i) {
+        //     ImageService.getUrl(i.team_img_url).then(function(url) {
+        //         $scope.images[i.team_img_url] = url;
+        //     });
+        // });
+        // console.log($scope.images);
         // $scope.actualUrl = function(url){
         //   return url;
         // }

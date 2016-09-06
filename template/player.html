@@ -13,9 +13,10 @@
                     <li>{{x.player_nationality}}</li>
                     <li>{{x.player_batting_style}}</li>
                     <li>{{x.player_bowling_style}}</li>
+                  </br>
             </td>
             <td>
-                <img src='{{x.player_img_url}}'></img>
+                <img id = {{x.player_img_url}} src='{{x.player_img_url}}' alt="PlayerImage" height="130" width="160" name = {{getImage(x.player_img_url)}}></img>
             </td>
         </tr>
     </tbody>

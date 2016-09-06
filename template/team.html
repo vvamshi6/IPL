@@ -1,12 +1,9 @@
 <div class="container" ng-init= "myVar = '#/player'">
     <div class="row" ng-controller = 'teamCtrl'>
         <div  data-ng-repeat="team in data" class="col-md-3">
-            <img ng-src = 'abc.png'id = {{(team.team_img_url)}} name = {{getImage(team.team_img_url)}}></img>
-            <!-- <button type="button" ng-click = "getImage('DelhiDareDevils/amit_mishra.png')" name="button">Image</button> -->
-            <a ng-href="{{myVar}}" ng-click = "setTeamName(team.team_name)">{{team.team_name}}</a>
-            <div ng-controller = 'teamCtrl' ng-repeat="(key, val) in images">
-                <img ng-src="{{images[key]}}"></img>
-            </div>
+          <a ui-sref="teamplayer({teamname:team.team_name})">
+            <img ng-src = '{{(team.team_img_url)}}'id = {{(team.team_img_url)}} name = {{getImage(team.team_img_url)}}></img>
+            {{team.team_name}}</a>
             <br>
             </br>
         </div>
