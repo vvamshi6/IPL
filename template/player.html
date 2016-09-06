@@ -1,3 +1,15 @@
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand">IPL</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+      </ul>
+    </div>
+  </nav>
+  <center>
 <table>
     <tr>
         <th>PLAYER</th>
@@ -6,14 +18,14 @@
     <tbody>
         <tr ng-repeat="x in data">
             <td>
-                <a href="">
-                    <li>{{x.player_name}}</li>
+                <a href="{{x.player_cricinfo_url}}" target = '_blank'>
+                    <li>{{x.player_name}}</li></a>
                     <li>{{x.player_role}}</li>
                     <li>{{x.player_dob}}</li>
                     <li>{{x.player_nationality}}</li>
                     <li>{{x.player_batting_style}}</li>
                     <li>{{x.player_bowling_style}}</li>
-                  </br>
+                  <br>
             </td>
             <td>
                 <img id = {{x.player_img_url}} src='{{x.player_img_url}}' alt="PlayerImage" height="130" width="160" name = {{getImage(x.player_img_url)}}></img>
@@ -21,3 +33,5 @@
         </tr>
     </tbody>
 </table>
+</center>
+</body>

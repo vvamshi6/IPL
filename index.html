@@ -13,18 +13,20 @@
 	<script src="https://cdn.firebase.com/libs/angularfire/2.0.2/angularfire.min.js"></script>
 	<script src="app.js"></script>
 </head>
-
+<!-- Starting of Angular Application -->
 <body ng-app="iplApp">
 	<div>
+		<!-- Ui view will be added here -->
 		<ui-view></ui-view>
 	</div>
 
 </body>
-<script src="controller/player_ctrl.js"></script>
-<script src="controller/team_ctrl.js"></script>
-<script src='services/team_service.js'></script>
-<script src='controller/image_ctrl.js'></script>
-<script src= 'services/image_service.js'></script>
+<!-- Required Controller and Services -->
+<script src="controller/playerCtrl.js"></script>
+<script src="controller/teamCtrl.js"></script>
+<script src='services/teamService.js'></script>
+<script src='controller/imageCtrl.js'></script>
+<script src= 'services/imageService.js'></script>
 
 <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
 <script>
