@@ -1,7 +1,5 @@
-<head>
-  <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
-</head>
 <body>
+<!-- Navigation Bar-->
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -12,14 +10,10 @@
       </ul>
     </div>
   </nav>
-<!-- <table> -->
-    <!-- <tr>
-        <th>PLAYER</th>
-        <th>IMAGE</th>
-    </tr> -->
-    <!-- <tbody> -->
+  <!-- Repeating through the players data-->
         <div ng-repeat="x in data" class = "col-md-4">
           <center>
+            <!--Creating Card Layout for Images-->
           <div class="w3-card-12 w3-gray"style="width:100%" "height = 180%">
             <header class="w3-container w3-red">
                 <a href="{{x.player_cricinfo_url}}" target = '_blank'><h6>{{x.player_name}}</h6></a>
@@ -29,8 +23,8 @@
             </div>
             <br>
               <h5>
+                <!--Footer for displaying player info-->
                 <footer class="w3-container w3-white">
-
                 <table>
                     <tr><td>Role</td><td>{{x.player_role}}</td></tr>
                     <tr><td>DateOfBirth</td><td>{{x.player_dob}}</td></tr>
@@ -43,55 +37,4 @@
             </footer>
             <br>
           </div>
-          <!-- <div class="w3-card-12" style="width:100%"> -->
-            <!-- <td>
-                <a href="{{x.player_cricinfo_url}}" target = '_blank'>
-                    <li>{{x.player_name}}</li></a>
-                    <li>{{x.player_role}}</li>
-                    <li>{{x.player_dob}}</li>
-                    <li>{{x.player_nationality}}</li>
-                    <li>{{x.player_batting_style}}</li>
-                    <li>{{x.player_bowling_style}}</li>
-                  <br><br><br>
-            </td> -->
-            <!-- <td>
-              <div class="w3-card-12 w3-teal" style="width:100%" height = "200%">
-
-                <header class="w3-container w3-blue">
-                  <h5>  <a href="{{x.player_cricinfo_url}}" target = '_blank'>
-                        <li>{{x.player_name}}</li></a>
-                </h5>
-                </header>
-                <div class="w3-container w3-center"> -->
-                    <!-- <h6>{{x.player_name}}</h6> -->
-                <!-- </div> -->
-                  <!-- <div class="w3-container w3-center">
-                    <img id = {{x.player_img_url}} src='{{x.player_img_url}}' alt="PlayerImage" height="140" width="150" name = {{getImage(x.player_img_url)}}></img> -->
-
-                      <!-- <a href="{{x.player_cricinfo_url}}" target = '_blank'>
-                          <li>{{x.player_name}}</li></a>
-                          <li>{{x.player_role}}</li>
-                          <li>{{x.player_dob}}</li>
-                          <li>{{x.player_nationality}}</li>
-                          <li>{{x.player_batting_style}}</li>
-                          <li>{{x.player_bowling_style}}</li> -->
-                        <!-- </div>
-
-<footer class="w3-container w3-blue">
-  <a href="{{x.player_cricinfo_url}}" target = '_blank'>
-      <li>{{x.player_name}}</li></a> -->
-      <!-- <li>{{x.player_role}}</li>
-      <li>{{x.player_dob}}</li>
-      <li>{{x.player_nationality}}</li>
-      <li>{{x.player_batting_style}}</li>
-      <li>{{x.player_bowling_style}}</li>
-
-</footer>
-</div>
-              </div>
-              <br>
-            </td>
-        </tr>
-    </tbody>
-</table> -->
 </body>

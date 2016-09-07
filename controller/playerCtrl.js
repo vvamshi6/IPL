@@ -1,7 +1,10 @@
+/*Defining module iplApp*/
 var iplApp = angular.module('iplApp');
+/*Defining the controller playerController*/
 iplApp.controller('playerCtrl', retrieveData);
+/*Defining the function retrieveData and passing required params*/
 function retrieveData($scope, $firebaseObject, $rootScope, TeamService,$stateParams,ImageService){
-    console.log("playerCtrl");
+    // console.log("playerCtrl");
     $scope.teamname = $stateParams.teamname.replace(/\s/g, "");
     var ref = firebase.database().ref($scope.teamname);
     var syncObject = $firebaseObject(ref);
