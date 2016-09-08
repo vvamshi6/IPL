@@ -12,4 +12,9 @@ angular.module('iplApp', ['ui.router', 'firebase'])
               templateUrl : 'template/player.html',
               controller : 'playerCtrl'
             })
+            .state('teamsinfo',{
+              url:'/teamslist',
+              templateUrl:'template/teams.html',
+              controller:'teamCtrl'
+            })
     });

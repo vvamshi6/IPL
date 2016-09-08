@@ -1,0 +1,31 @@
+<body>
+  <div class = 'col-md-12' ng-repeat = "x in data">
+  <center>
+  <div class = "w3-card-6" style="width:50%;">
+    <table><tr><td>
+      <!-- <a ui-sref="teamplayer({teamname:team.team_name})"> -->
+      <a ui-sref="teamplayer({teamname:x.team_name})">
+      <img id = {{x.team_img_url}}  src='{{x.team_img_url}}' alt="PlayerImage" height="250" width="450" name = {{getImage(x.team_img_url)}}></img></a>
+
+<br><br>
+</td></tr>
+<br><br>
+    <!-- <div class = "w3-container"> -->
+    <!-- <p> -->
+    <p>
+      <tr><td>
+    <li>Name : {{x.team_name}}</li>
+    <li>Captain  :{{x.team_captain}}</li>
+    <li>Coach    :{{x.team_coach}}</li>
+    <li>Owner:{{x.team_owner}}</li>
+    <li>HomeVenue:{{x.team_home_venue}}</li>
+  </td></tr>
+</p></table>
+    <!-- </p> -->
+  </div>
+  <br>
+  </center>
+  </div>
+
+</div>
+</body>

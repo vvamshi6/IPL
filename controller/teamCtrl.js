@@ -9,18 +9,17 @@ function retrieveData($scope, $firebaseObject, $rootScope, TeamService, ImageSer
             console.log('function called');
             var url = ImageService.getUrl(image).then(function(url) {
                 document.getElementById(image).src = url;
-
             });
         }
     });
-    var storage = firebase.storage();
-    var storageRef = firebase.storage().ref();
-    storageRef.child('DelhiDareDevils/amit_mishra.png').getDownloadURL().then(function(url) {
-        //console.log(url);
-        // Get the download URL for 'images/stars.jpg'
-        // This can be inserted into an <img> tag
-        // This can also be downloaded directly
-    }).catch(function(error) {
-        console.log("Error" + error);
-    });
+    // var storage = firebase.storage();
+    // var storageRef = firebase.storage().ref();
+    // storageRef.child('DelhiDareDevils/amit_mishra.png').getDownloadURL().then(function(url) {
+    //     //console.log(url);
+    //     // Get the download URL for 'images/stars.jpg'
+    //     // This can be inserted into an <img> tag
+    //     // This can also be downloaded directly
+    // }).catch(function(error) {
+    //     console.log("Error" + error);
+    // });
 };
