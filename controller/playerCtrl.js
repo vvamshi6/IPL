@@ -5,8 +5,9 @@ iplApp.controller('playerCtrl', retrieveData);
 /*Defining the function retrieveData and passing required params*/
 function retrieveData($scope, $firebaseObject, $rootScope, TeamService,$stateParams,ImageService){
     // console.log("playerCtrl");
-    $scope.teamname = $stateParams.teamname.replace(/\s/g, "");
-    var ref = firebase.database().ref($scope.teamname);
+    $scope.teamname = $stateParams.teamname;
+    $scope.teamName = $stateParams.teamname.replace(/\s/g, "");
+    var ref = firebase.database().ref($scope.teamName);
     var syncObject = $firebaseObject(ref);
     syncObject.$loaded().then(function(result) {
         $scope.data = result;

@@ -1,5 +1,8 @@
 <body>
   <!-- Repeating through the players data-->
+  <header>
+      <a ui-sref = "teaminfo({teaminformation:teamname})"><h1 style= 'color:white'><center>{{teamname}}</center></h1>
+  </header>
         <div ng-repeat="x in data" class = "col-md-4">
           <center>
             <!--Creating Card Layout for Images-->
@@ -7,10 +10,9 @@
             <header class="w3-container w3-red">
                 <a href="{{x.player_cricinfo_url}}" target = '_blank'><h6>{{x.player_name}}</h6></a>
             </header>
-            <div class="w3-container w3-hover-shadow w3-center">
+            <div class="w3-container w3-hover-shadow w3-center w3-blue">
               <img id = {{x.player_img_url}}  src='{{x.player_img_url}}' alt="PlayerImage" height="180" width="170" name = {{getImage(x.player_img_url)}}></img>
             </div>
-            <br>
               <h5>
                 <!--Footer for displaying player info-->
                 <footer class="w3-container w3-white">
