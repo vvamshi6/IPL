@@ -1,3 +1,9 @@
+/*
+* FileName:app.js
+* CreatedBy: Vamsee
+* Date :07-08-2016
+* Purpose : Main Routing application
+*/
 angular.module('iplApp', ['ui.router', 'firebase'])
     .config(function($stateProvider, $urlRouterProvider) {
         $urlRouterProvider.otherwise('/team');

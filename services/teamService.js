@@ -1,3 +1,9 @@
+/*
+* FileName:teamService.js
+* CreatedBy: Vamsee
+* Date :07-08-2016
+* Purpose : teamService for changing the name of team when clicked
+*/
 var iplApp = angular.module('iplApp');
 iplApp.factory('TeamService', function() {
     var teamName;

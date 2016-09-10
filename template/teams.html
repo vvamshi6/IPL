@@ -1,7 +1,13 @@
+<!--
+* FileName:teams.html
+* CreatedBy: Vamsee
+* Date :07-08-2016
+* Purpose : UI for displaying all teams information
+-->
 <body>
-  <div class = 'col-md-12' ng-repeat = "x in data">
+  <div >
   <center>
-  <div class = "w3-card-6" style="width:50%;">
+  <div class = 'col-md-6' ng-repeat = "x in data" class = "w3-card-6" style="width:50%;">
     <table>
       <tr><td>
         <a ui-sref="teamplayer({teamname:x.team_name})">
