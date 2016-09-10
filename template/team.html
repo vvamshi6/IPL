@@ -4,7 +4,6 @@
 * Date :07-08-2016
 * Purpose : UI for displaying team information
 -->
-<body>
   <!-- Carousel Layout for team images-->
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!--Carousel indicators-->
@@ -13,18 +12,18 @@
     </ol>
     <!--Carousel inner for Images-->
           <div class="carousel-inner" role="listbox">
-              <div class="item" data-ng-repeat="team in data" data-ng-class="{active : $first}">
+              <div class="item" data-ng-repeat="team in data" data-ng-class="{active : $first}" >
                   <a ui-sref="teamplayer({teamname:team.team_name})">
                     <div class="w3-card-12 w3-center" style="width:100%">
                       <center>
                   <img ng-src='{{(team.team_img_url)}}' id= {{(team.team_img_url)}} name= {{getImage(team.team_img_url)}} height="500" width="700"></img>
-                </center></div>
+                  <!-- <img ng-src='{{iurl}}' id= {{(team.team_img_url)}}  height="500" width="700"></img> -->
+                    </center></div>
                   <div class="carousel-caption">
-                   <h4>{{team.team_name}}</h4>
+                     <!-- <h4>{{team.team_name}}</h4> -->
                   </div>
-                  </a>
+                    </a>
               </div>
-
           </div>
           <!--Carousel Controllers Left control and right control-->
           <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
@@ -36,4 +35,3 @@
               <span class="sr-only">Next</span>
           </a>
           </div>
-</body>

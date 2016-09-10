@@ -24,7 +24,7 @@ function retrieveData($scope, $firebaseObject, $rootScope, TeamService,$statePar
         });
         /*function to retrieve image*/
     $scope.getImage = function(image) {
-        console.log('function called in ');
+        console.log(image);
         var url = ImageService.getUrl(image).then(function(url) {
           /*Inserting the image url into source*/
             document.getElementById(image).src = url;

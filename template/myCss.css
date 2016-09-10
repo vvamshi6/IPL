@@ -4,7 +4,9 @@
 * Date :07-08-2016
 * Purpose : stylesheet
 */
-
+li{
+  list-style: none;
+}
 
 
 body {
@@ -14,16 +16,18 @@ body {
 }
 /*table, td, th {
     border: 1px solid black;
-}
+}*/
 
 table {
+  text-align: center
+    table-layout:fixed
     border-collapse: collapse;
     width: 100%;
 }
 
-th {
+/*th {
     height: 50px;
-    text-align: left;
+    text-align: center;;
         padding: 8px;
 }*/
 .left carousel-control, right carousel-control {

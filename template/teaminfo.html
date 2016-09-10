@@ -4,21 +4,17 @@
 * Date :07-08-2016
 * Purpose : UI for displaying particular team information
 -->
-<body>
   <!-- displaying the teamName -->
   <center><h1 style="color:white">{{teamname}} Team Information</h1>
     <div style="color:white">
-      <!-- <img id={ {teamdata.team_img_url}} src='{{teamdata.team_img_url}}' alt="PlayerImage" height="220" width="450" name={ {getImage(teamdata.team_img_url)}}></img> -->
-      <!-- <div class = 'w3-container w3-teal' width='70%'> -->
-      <div class="w3-card-4" style= width :'50%'>
-        <table><tr><td>
-        <li>Name : {{teamdata.team_name}}</li>
+      <div class="w3-card-4" style= 'width :75%'>
+        <table style = 'width:50%'><tr><td>
+        <li>Name     :{{teamdata.team_name}}</li>
         <li>Captain  :{{teamdata.team_captain}}</li>
         <li>Coach    :{{teamdata.team_coach}}</li>
-        <li>Owner:{{teamdata.team_owner}}</li>
+        <li>Owner    :{{teamdata.team_owner}}</li>
         <li>HomeVenue:{{teamdata.team_home_venue}}</li>
       </td><td><img class = 'thumbnail' id = {{teamdata.team_img_url}}  src='{{teamdata.team_img_url}}' alt="PlayerImage" height="120" width="250" name = {{getImage(teamdata.team_img_url)}}></img></a></td></tr></table>
-        <!-- displaying the team data in the table -->
         <!-- <h3><table>
         <tr><td>Captain</td><td>{{teamdata.team_captain}}</td></tr>
         <tr><td>Coach</td><td>{{teamdata.team_coach}}</td></tr>
@@ -34,4 +30,3 @@
     </div>
   <!-- </div> -->
     </div></center>
-</body>

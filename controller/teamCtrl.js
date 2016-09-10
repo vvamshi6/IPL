@@ -33,10 +33,14 @@ function retrieveData($scope, $firebaseObject, $rootScope, TeamService, ImageSer
         console.log($scope.teamdata);
         /*function to retrieve the image*/
         $scope.getImage = function(image) {
-            console.log('function called');
             console.log(image);
             var url = ImageService.getUrl(image).then(function(url) {
+                // $scope.iurl = url;
+                // console.log($scope.iurl);
                 document.getElementById(image).src = url;
+                // return url;
+                // var myEl = angular.element( document.querySelector( '#image' ) );
+                // myEl.ngSrc = url;
                 // var target = angular.element(image);
                 // target.src = url;
             });
