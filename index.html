@@ -1,20 +1,39 @@
+<!--
+* FileName:index.html
+* CreatedBy: Vamsee
+* Date :07-08-2016
+* Purpose : main page for routing
+-->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+	<link rel="stylesheet" href="template/myCss.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="http://code.angularjs.org/1.2.13/angular.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
 	<script src="https://cdn.firebase.com/libs/angularfire/2.0.2/angularfire.min.js"></script>
-	<script src="app.js"></script>
+
 </head>
-<!-- Starting of Angular Application -->
+<!-- Starting/Creating of Angular Application -->
 <body ng-app="iplApp">
+	<!--Navigation Bar-->
+	    <nav class="navbar navbar-default">
+	        <div class="container-fluid">
+	            <div class="navbar-header">
+	                <a class="navbar-brand">IPL</a>
+	            </div>
+	            <ul class="nav navbar-nav">
+	                <li style="float:right" ><a class="active" ui-sref="team">Home</a></li>
+	                <li style="float:right" ><a class="active" ui-sref="teams({teamlist:team})">Teams</a></li>
+	            </ul>
+	        </div>
+	    </nav>
 	<div>
 		<!-- Ui view will be added here -->
 		<ui-view></ui-view>
@@ -29,12 +48,11 @@
   }
   </style>
 <!-- Required Controller and Services -->
+<script src="app.js"></script>
 <script src="controller/playerCtrl.js"></script>
 <script src="controller/teamCtrl.js"></script>
 <script src='services/teamService.js'></script>
-<script src='controller/imageCtrl.js'></script>
 <script src= 'services/imageService.js'></script>
-
 <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
 <script>
   // Initialize Firebase
