@@ -1,0 +1,17 @@
+  .state('teamplayer', {
+      url: '/?teamname',
+          templateUrl: 'templates/player.html',
+          controller: 'playerCtrl'
+    })
+
+
+
+state('tab.home.playerinfo', {
+      url: '/?teamname',
+      views:{
+        'tab-home@tabs':{
+          templateUrl: 'templates/player.html',
+          controller: 'playerCtrl'
+        }
+      }
+  })
